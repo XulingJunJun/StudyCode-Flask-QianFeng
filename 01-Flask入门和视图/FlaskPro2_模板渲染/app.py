@@ -16,6 +16,7 @@ def index():
     # 2.模板数据渲染
     return render_template('index.html', name='张三')
     # 3.返回json字符串(字典序列化)
+    # 
 
 
 if __name__ == '__main__':
