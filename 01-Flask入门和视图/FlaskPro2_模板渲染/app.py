@@ -1,6 +1,6 @@
 from tkinter.font import names
 
-from flask import Flask
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -15,8 +15,10 @@ def index():
 
     # 2.模板数据渲染
     return render_template('index.html', name='张三')
-    # 3.返回json字符串(字典序列化)
 
+    # 3.返回json字符串(字典序列化)
+    # return jsonify({'name': '张三', 'age': 33})
+    # return {'name': '张三', 'age': 33}
 
 if __name__ == '__main__':
     app.run(debug=True)
