@@ -12,6 +12,6 @@ def index():
     return 'index'
 
 @product.route('/product')
-# 蓝图和函数不能同名
+# from .views import *时,蓝图和函数不能同名
 def pro():
     return 'product'
