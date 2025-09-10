@@ -3,7 +3,7 @@
  * User: xuheng
  * Date: 12-9-26
  * Time: 下午12:29
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 
 //清空上次查选的痕迹

@@ -66,6 +66,6 @@ def before():
 # static和templates
 @blue.route('/templates/')
 def templates():
-    return render_template('template.html')
+    return render_template('templates.html')
 
 

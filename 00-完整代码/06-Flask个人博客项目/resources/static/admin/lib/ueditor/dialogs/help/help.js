@@ -3,7 +3,7 @@
  * User: xuheng
  * Date: 12-9-26
  * Time: 下午1:06
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 /**
  * tab点击处理事件

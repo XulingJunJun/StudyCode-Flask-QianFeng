@@ -3,7 +3,7 @@
  * User: taoqili
  * Date: 12-1-30
  * Time: 下午12:50
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 
 

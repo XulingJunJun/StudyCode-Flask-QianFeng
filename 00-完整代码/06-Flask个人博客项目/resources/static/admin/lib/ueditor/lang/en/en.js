@@ -3,7 +3,7 @@
  * User: taoqili
  * Date: 12-6-12
  * Time: 下午6:57
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 UE.I18N['en'] = {
     'labelMap':{
@@ -427,7 +427,7 @@ UE.I18N['en'] = {
         'errorServerUpload':'Server Result Error.'
     },
     'webapp':{
-        'tip1':"This function provided by Baidu APP,please apply for baidu APPKey webmaster first!",
+        'tip1':"This function provided by Baidu App,please apply for baidu APPKey webmaster first!",
         'tip2':"And then open the file ueditor.config.js to set it! ",
         'applyFor':"APPLY FOR",
         'anthorApi':"Baidu API"

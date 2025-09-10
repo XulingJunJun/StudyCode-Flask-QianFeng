@@ -3,7 +3,7 @@
  * User: xuheng
  * Date: 12-12-19
  * Time: 下午4:55
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 (function () {
     var title = $G("J_title"),

@@ -10,9 +10,10 @@
     <option name="myDocStringFormat" value="Plain" />
   </component>
   <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/01-Flask入门和视图/code/FlaskPro1_第一个Flask项目/templates" />
+        <option value="$MODULE_DIR$/01-Flask入门和视图/FlaskPro3_项目拆分/templates" />
       </list>
     </option>
   </component>

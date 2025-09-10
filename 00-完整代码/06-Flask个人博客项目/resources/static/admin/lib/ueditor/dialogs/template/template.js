@@ -3,7 +3,7 @@
  * User: xuheng
  * Date: 12-8-8
  * Time: 下午2:09
- * To change this template use File | Settings | File Templates.
+ * To change this templates use File | Settings | File Templates.
  */
 (function () {
     var me = editor,
