@@ -4,6 +4,7 @@
 
 from flask import Blueprint
 
+# 两种蓝图
 blue = Blueprint('user', __name__)
 product = Blueprint('product', __name__)
 @blue.route('/')
