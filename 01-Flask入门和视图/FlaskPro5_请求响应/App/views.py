@@ -2,7 +2,7 @@
 
 # from App import
 
-from flask import Blueprint, request, render_template, jsonify, make_response ,Response
+from flask import Blueprint, request, render_template, jsonify, make_response, Response, redirect, url_for
 
 blue = Blueprint('user', __name__)
 product = Blueprint('product', __name__)
@@ -22,7 +22,6 @@ def pro():
 def get_request():
     # 1.1
     print(request)
-
 
     print(request.method)
 
@@ -92,6 +91,29 @@ def get_response():
     # 两种响应方式
     res = make_response(html, 200)
     res = Response(html,300)
+    return res
+
+# 3.测试redirect重定向
+@blue.route('/redirect/')
+def make_redirect():
+    pass
+
+    # 1.外部重定向
+    # res = redirect('http://www.baidu.com')
+
+    # 2.内部重定向:通过路由找视图函数
+    # res = redirect('/response/')
+
+    # 3.url_for()重定向: url_for('蓝图名称.视图函数')
+    # 反向解析(通过所给的蓝图.视图函数反过来找路由)
+    # ret = url_for('user.get_response')
+    # print('ret:', ret)
+    # res = redirect(ret)
+
+    # 4.url_for()传参
+    ret2 = url_for('user.get_request', name='王五', age=66)
+    res = redirect(ret2)
+
     return res
 
 
