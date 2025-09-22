@@ -20,8 +20,13 @@ def pro():
 @blue.route('/')
 @blue.route('/index/')
 def index_method():
-    # 从session中获取用户名
+    # 3.从cookie中获取用户名
+    # username = request.cookies.get('user')
+
+    # session版本
     username = session.get('user')
+
+    # 4.将username传给模板
     return render_template('index.html', username=username)
 
 
@@ -38,16 +43,20 @@ def login_method():
         print(username, password)
 
         if username == 'lisi' and password == '123':
-            # 将用户名和密码保存在session中(cookies中不能有中文)
-            session['user'] = username
-            #
-            session.permanent = True
-
             response = redirect('/index')
 
-            # 设置session的过期时间
-            response.set_cookie('user', username, max_age=3600 * 24 * 7)
+            # 1.将用户名和密码保存在cookies中(cookies中不能有中文)
+            # response.set_cookie('user', username)
+
+            # session版本
+            session['user'] = username
+
+            # 2.设置cookies过期时间
+            # response.set_cookie('user', username, max_age=3600 * 24 * 7)
             # response.set_cookie('user', username, expires=datetime.datetime(2025, 12, 12))
+
+            # session版本
+            session.permanent = True
 
             # 登录成功后，跳转到首页
             return response
@@ -58,9 +67,11 @@ def login_method():
 
 @blue.route('/logout/')
 def logout_method():
-    # 删除session中的数据
-    session.pop('user')
-    # 删除cookies中的数据
     response = redirect('/index')
-    response.delete_cookie('user')
+
+    # 5.删除cookies中的数据
+    # response.delete_cookie('user')
+
+    # session版本
+    session.pop('user')
     return response

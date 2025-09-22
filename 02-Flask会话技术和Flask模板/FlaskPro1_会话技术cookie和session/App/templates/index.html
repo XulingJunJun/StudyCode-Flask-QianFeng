@@ -9,10 +9,12 @@
 <p>
     Index
 </p>
+{#{% if username %}#}
 {% if session.user %}
     <p>
-        用户：{{ session.user }}
-        <br>
+        {#        用户：{{ username }}#}
+                用户：{{ session.user }}
+                <br>
         <a href="/logout">注销</a>
     </p>
 {% else %}
