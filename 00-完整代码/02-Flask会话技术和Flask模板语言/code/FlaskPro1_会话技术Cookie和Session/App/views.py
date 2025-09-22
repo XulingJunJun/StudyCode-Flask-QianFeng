@@ -57,6 +57,7 @@ def login():
 
         else:
             return '用户名或密码错误!'
+    return None
 
 
 # 注销

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+<p>
+    Index
+</p>
+{% if session.user %}
+    <p>
+        用户：{{ session.user }}
+        <br>
+        <a href="/logout">注销</a>
+    </p>
+{% else %}
+    {#get请求#}
+    <a href="/login">Login</a>
+{% endif %}
+
+<hr>
+
+
+</body>
+</html>
