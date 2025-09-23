@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+{#######################################################################################################################}
+
+{#变量#}
+<h4>变量:</h4>
+<p>name: {{ name }}</p>
+<p>age: {{ age }}</p>
+<p>hobby: {{ hobby }}</p>
+
+<hr>
+{#######################################################################################################################}
+
+{#标签#}
+<h4>标签:</h4>
+<h5>if语句:</h5>
+{% if age >= 18 and age < 60 %}
+    <p>已经成年</p>
+{% elif age < 18 %}
+    <p>未成年</p>
+{% else %}
+    <p>老年人</p>
+{% endif %}
+
+{#######################################################################################################################}
+
+<hr>
+<h5>for 循环:</h5>
+<ul>
+    {% for h in hobby %}
+
+        <li>{{ h }}</li>
+        loop.index: {{ loop.index }}
+        loop.index0: {{ loop.index0 }}
+
+        loop.revindex: {{ loop.revindex }}
+        loop.revindex0: {{ loop.revindex0 }}
+
+        <p>loop.first: {{ loop.first }}</p>
+        <p>loop.last: {{ loop.last }}</p>
+        <p>loop.length: {{ loop.length }}</p>
+
+        {% if loop.first %}
+            <b style="color: red">{{ h }}</b>
+        {% elif loop.last %}
+            <b style="color: blue">{{ h }}</b>
+        {% else %}
+            <b style="color: black">{{ h }}</b>
+        {% endif %}
+
+        {#循环出现问题的话会执行else#}
+    {% else %}
+        <b>i am else</b>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

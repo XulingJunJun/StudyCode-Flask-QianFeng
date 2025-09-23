@@ -1,0 +1,40 @@
+{#继承#}
+{% extends "child1.html" %}
+
+{#super 函数#}
+{% block  head %}
+    {{ super() }}
+    <div>i am child2 head</div>
+{% endblock %}
+
+{# include函数 #}
+{% block  content %}
+    <div>i am child2 content</div>
+    {% include "child2_include.html" %}
+{% endblock %}
+
+{#宏定义 macro (相当于python中的函数)#}
+{% macro person(name,  age) %}
+    <b>年龄: {{ age }}, 姓名: {{ name }}</b>
+{% endmacro %}
+
+{% block  foot %}
+    {{ person("石卫", "21") }}
+
+    {#    过滤器#}
+    <p>{{ name|upper }}</p>
+    <p>{{ name|lower }}</p>
+    <p>{{ name|capitalize }}</p>
+    <p>{{ name |lower | title }}</p>
+    {#    没有不会报错#}
+    <p>{{ name2 }}</p>
+    <p>{{ name2  | default("没有值") }}</p>
+
+    {#    没有还过滤就会报错#}
+    <p>{{ name2 | reverse }}</p>
+    <p>{{ name2 | reverse | default("没有值") }}</p>
+
+{% endblock %}
+
+{#宏导入#}
+{#{% from "xxx.html" import hello %}#}
